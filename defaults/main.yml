@@ -1,0 +1,12 @@
+---
+# defaults file for kubens
+
+kubens_app: kubens
+kubens_version: 0.9.4
+kubens_os: linux
+kubens_arch: x86_64
+kubens_dl_url: https://github.com/ahmetb/kubectx/releases/download/v{{ kubens_version }}/{{ kubens_app }}_v{{ kubens_version }}_{{ kubens_os }}_{{ kubens_arch }}.tar.gz
+kubens_bin_path: /usr/local/bin
+kubens_file_owner: root
+kubens_file_group: root
+kubens_file_mode: '0755'

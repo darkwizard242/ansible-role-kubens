@@ -1,0 +1,13 @@
+---
+# tasks file for kubens | Debian/Ubuntu Family
+
+- name: Debian/Ubuntu Family | Downloading and extracting {{ kubens_app }} {{ kubens_version }}
+  unarchive:
+    src: "{{ kubens_dl_url }}"
+    dest: "{{ kubens_bin_path }}"
+    extra_opts:
+      - "{{ kubens_app }}"
+    remote_src: yes
+    owner: "{{ kubens_file_owner }}"
+    group: "{{ kubens_file_group }}"
+    mode: "{{ kubens_file_mode }}"
