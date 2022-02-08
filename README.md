@@ -38,7 +38,7 @@ kubens_dl_url     | Defines URL to download the kubens binary from.
 kubens_bin_path   | Defined to dynamically set the appropriate path to store kubens binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
 kubens_file_owner | Owner for the binary file of kubens.
 kubens_file_group | Group for the binary file of kubens.
-kubens_file_group | Mode for the binary file of kubens.
+kubens_file_mode  | Mode for the binary file of kubens.
 
 ## Dependencies
 
