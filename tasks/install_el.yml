@@ -2,7 +2,7 @@
 # tasks file for kubens | EL Family
 
 - name: EL Family | Downloading and extracting {{ kubens_app }} {{ kubens_version }}
-  unarchive:
+  ansible.builtin.unarchive:
     src: "{{ kubens_dl_url }}"
     dest: "{{ kubens_bin_path }}"
     extra_opts:
