@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 kubens_app: kubens
-kubens_version: 0.9.4
+kubens_version: 0.9.5
 kubens_os: linux
 kubens_arch: x86_64
 kubens_dl_url: https://github.com/ahmetb/kubectx/releases/download/v{{ kubens_version }}/{{ kubens_app }}_v{{ kubens_version }}_{{ kubens_os }}_{{ kubens_arch }}.tar.gz
@@ -31,7 +31,7 @@ kubens_file_mode: '0755'
 Variable          | Description
 ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------
 kubens_app        | Defines the app to install i.e. **kubens**
-kubens_version    | Defined to dynamically fetch the desired version to install. Defaults to: **0.9.4**
+kubens_version    | Defined to dynamically fetch the desired version to install. Defaults to: **0.9.5**
 kubens_osarch     | Used to specify OS type.
 kubens_arch       | Used to specify OS architecture type.
 kubens_dl_url     | Defines URL to download the kubens binary from.

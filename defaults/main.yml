@@ -2,7 +2,7 @@
 # defaults file for kubens
 
 kubens_app: kubens
-kubens_version: 0.9.4
+kubens_version: 0.9.5
 kubens_os: linux
 kubens_arch: x86_64
 kubens_dl_url: https://github.com/ahmetb/kubectx/releases/download/v{{ kubens_version }}/{{ kubens_app }}_v{{ kubens_version }}_{{ kubens_os }}_{{ kubens_arch }}.tar.gz
