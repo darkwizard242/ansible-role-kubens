@@ -17,9 +17,17 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 kubens_app: kubens
 kubens_version: 0.9.5
-kubens_os: linux
-kubens_arch: x86_64
-kubens_dl_url: https://github.com/ahmetb/kubectx/releases/download/v{{ kubens_version }}/{{ kubens_app }}_v{{ kubens_version }}_{{ kubens_os }}_{{ kubens_arch }}.tar.gz
+kubens_os: "{{ ansible_system | lower }}"
+kubens_architecture_map:
+  amd64: x86_64
+  arm: arm64
+  x86_64: x86_64
+  armv6l: armv6
+  armv7l: armv7
+  aarch64: arm64
+  32-bit: "386"
+  64-bit: x86_64
+kubens_dl_url: https://github.com/ahmetb/kubectx/releases/download/v{{ kubens_version }}/{{ kubens_app }}_v{{ kubens_version }}_{{ kubens_os }}_{{ kubens_architecture_map[ansible_architecture] }}.tar.gz
 kubens_bin_path: /usr/local/bin
 kubens_file_owner: root
 kubens_file_group: root
@@ -28,17 +36,17 @@ kubens_file_mode: '0755'
 
 ### Variables table:
 
-Variable          | Description
------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------
-kubens_app        | Defines the app to install i.e. **kubens**
-kubens_version    | Defined to dynamically fetch the desired version to install. Defaults to: **0.9.5**
-kubens_osarch     | Used to specify OS type.
-kubens_arch       | Used to specify OS architecture type.
-kubens_dl_url     | Defines URL to download the kubens binary from.
-kubens_bin_path   | Defined to dynamically set the appropriate path to store kubens binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
-kubens_file_owner | Owner for the binary file of kubens.
-kubens_file_group | Group for the binary file of kubens.
-kubens_file_mode  | Mode for the binary file of kubens.
+Variable                | Description
+----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------
+kubens_app              | Defines the app to install i.e. **kubens**
+kubens_version          | Defined to dynamically fetch the desired version to install. Defaults to: **0.9.5**
+kubens_osarch           | Used to specify OS type.
+kubens_architecture_map | Used to specify OS architecture type.
+kubens_dl_url           | Defines URL to download the kubens binary from.
+kubens_bin_path         | Defined to dynamically set the appropriate path to store kubens binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
+kubens_file_owner       | Owner for the binary file of kubens.
+kubens_file_group       | Group for the binary file of kubens.
+kubens_file_mode        | Mode for the binary file of kubens.
 
 ## Dependencies
 
