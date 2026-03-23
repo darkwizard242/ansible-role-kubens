@@ -16,7 +16,7 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 kubens_app: kubens
-kubens_version: 0.9.5
+kubens_version: 0.10.0
 kubens_os: "{{ ansible_system | lower }}"
 kubens_architecture_map:
   amd64: x86_64
@@ -39,7 +39,7 @@ kubens_file_mode: '0755'
 Variable                | Description
 ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------
 kubens_app              | Defines the app to install i.e. **kubens**
-kubens_version          | Defined to dynamically fetch the desired version to install. Defaults to: **0.9.5**
+kubens_version          | Defined to dynamically fetch the desired version to install. Defaults to: **0.10.0**
 kubens_osarch           | Used to specify OS type.
 kubens_architecture_map | Used to specify OS architecture type.
 kubens_dl_url           | Defines URL to download the kubens binary from.
