@@ -2,7 +2,7 @@
 # defaults file for kubens
 
 kubens_app: kubens
-kubens_version: 0.9.5
+kubens_version: 0.10.0
 kubens_os: "{{ ansible_system | lower }}"
 kubens_architecture_map:
   amd64: x86_64
